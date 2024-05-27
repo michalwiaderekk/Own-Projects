@@ -1,0 +1,11 @@
+Dane:
+Wzór funkcji : $ 5x + 5/6 = y $
+
+Szukane:
+$ x0 = ? $
+
+$ 5x + 5/6 = 0 $
+$ 5x = - 5/6 $
+$ x = - 1/6 $
+
+Odp: Miejsce zerowe funkcji $ 5x + 5/6 = y $ znajduje się w punkcie $ x = - 1/6 $

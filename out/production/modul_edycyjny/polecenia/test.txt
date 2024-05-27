@@ -1,0 +1,1 @@
+Dany jest wzór : $ x + 25 = y $, wskaż miejsca zerowe
