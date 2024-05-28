@@ -1,9 +1,7 @@
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    //public final String basePath = "C:\\Users\\rwiad\\Desktop\\Uczelnia\\modul_edycyjny\\src\\polecenia";
     public static void main(String[] args) {
         while(true){
             System.out.println("Co chcesz zrobić?");
@@ -61,12 +59,17 @@ public class Main {
                     scanner.nextLine();
                     System.out.print("Podaj imie i nazwisko studenta:");
                     String studentName = scanner.nextLine();
-                    Solution solution = new Solution(studentName);
-                    solution.loadFile();
-                    System.out.print("Podaj sciezke do rozwiazania:");
-                    String path = scanner.nextLine();
-
-                    System.out.println(solution.viewSolution(path));
+                    System.out.print("Podaj nazwe zadania:");
+                    String taskName = scanner.nextLine();
+                    ViewSolutionsSequentially viewSolutions = new ViewSolutionsSequentially(studentName,taskName);
+                    int option = 3;
+                    do{
+                        viewSolutions.showOptions();
+                        do{
+                            option = scanner.nextInt();
+                        }while(!viewSolutions.validOption(option));
+                        viewSolutions.setOption(option);
+                    }while(option != 3);
                     break;
                 }
                 default : {

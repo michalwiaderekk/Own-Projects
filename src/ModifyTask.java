@@ -6,9 +6,8 @@ public class ModifyTask
         implements Command{
     private Scanner scanner = new Scanner(System.in);
     private Modification type;
-    private Task task;
     public ModifyTask(Task task){
-        this.task = task;
+        super(task);
     }
     public void setType(Modification type){
         this.type = type;
@@ -30,14 +29,14 @@ public class ModifyTask
                 scanner.nextLine();
                 System.out.println("Wprowadź nową zawartość:\n");
                 String newLine = scanner.nextLine();
-                task.modifyLine(lineNumber,newLine);
-                task.createFile();
+                super.getObj().modifyLine(lineNumber,newLine);
+                super.getObj().createFile();
             }
             case ADD -> {
                 System.out.println("Wprowadź nową zawartość:\n");
                 String newLine = scanner.nextLine();
-                task.addLine(newLine);
-                task.createFile();
+                super.getObj().addLine(newLine);
+                super.getObj().createFile();
             }
         }
     }

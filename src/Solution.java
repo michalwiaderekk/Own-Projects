@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution
-    implements
+        implements
         FileHandler{
     private final String basePath = "C:\\Users\\rwiad\\Desktop\\Uczelnia\\modul_edycyjny";
     private String studentName;

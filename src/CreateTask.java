@@ -2,10 +2,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CreateTask
-    extends UserInterface<Task>
-    implements Command{
+        extends UserInterface<Task>
+        implements Command{
     private Scanner scanner = new Scanner(System.in);
-    public CreateTask() {execute();}
+    public CreateTask() {
+        super();
+        execute();
+    }
 
     @Override
     public void showOptions() {}
@@ -27,7 +30,7 @@ public class CreateTask
                 break;
             }
         }
-        Task task = new Task(taskName, taskContent, "C:\\Users\\rwiad\\Desktop\\Uczelnia\\modul_edycyjny\\src\\polecenia\\" + taskName + ".txt");
-        task.createFile();
+        super.setObj(new Task(taskName, taskContent, super.getBasePath() + "Tasks\\" + taskName + ".txt"));
+        super.getObj().createFile();
     }
 }
