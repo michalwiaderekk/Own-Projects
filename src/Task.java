@@ -24,6 +24,10 @@ public class Task
     public Task(String path){
         this.path = path;
     }
+    public Task(String name, String path){
+        this.name = name;
+        this.path = path;
+    }
 
     public String getName(){
         return this.name;

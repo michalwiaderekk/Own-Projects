@@ -44,6 +44,15 @@ public class Main {
                     break;
                 }
                 case 4 : {
+                    ViewTasks viewTasks = new ViewTasks();
+                    int option = 3;
+                    do{
+                        viewTasks.showOptions();
+                        do{
+                            option = scanner.nextInt();
+                        }while(!viewTasks.validOption(option));
+                        viewTasks.setOption(option);
+                    }while(option != 3);
                     break;
                 }
                 case 5 : {
